@@ -1,0 +1,40 @@
+"use strict";
+// ============================
+// @salonova/shared — Main Entry
+// ============================
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+// Constants & Enums
+__exportStar(require("./constants"), exports);
+// Entity Types
+__exportStar(require("./types/base"), exports);
+__exportStar(require("./types/tenant"), exports);
+__exportStar(require("./types/user"), exports);
+__exportStar(require("./types/customer"), exports);
+__exportStar(require("./types/staff"), exports);
+__exportStar(require("./types/appointment"), exports);
+__exportStar(require("./types/transaction"), exports);
+__exportStar(require("./types/inventory"), exports);
+__exportStar(require("./types/subscription"), exports);
+// Sync Types
+__exportStar(require("./types/sync"), exports);
+// Event Types
+__exportStar(require("./types/events"), exports);
+// API Types
+__exportStar(require("./types/api"), exports);
+// Utilities
+__exportStar(require("./utils/uuid"), exports);
+__exportStar(require("./utils/date"), exports);
