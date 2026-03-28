@@ -1,0 +1,16 @@
+{
+  "name": "@salonova/shared",
+  "version": "1.0.0",
+  "description": "Shared types, DTOs, constants, and utilities for the Salonova platform",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "~5.5.0"
+  },
+  "private": true
+}
