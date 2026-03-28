@@ -3,8 +3,10 @@
  * Uses crypto.randomUUID when available, falls back to manual generation.
  */
 export function generateUUID(): string {
-  if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
-    return crypto.randomUUID();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const g = typeof globalThis !== 'undefined' ? (globalThis as any) : ({} as any);
+  if (g.crypto && typeof g.crypto.randomUUID === 'function') {
+    return g.crypto.randomUUID();
   }
   // Fallback for environments without crypto.randomUUID
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
