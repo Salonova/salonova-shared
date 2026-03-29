@@ -30,10 +30,14 @@ export interface ITransactionItem {
 export interface ICreateTransactionDTO {
   customer_id?: string;
   staff_id?: string;
-  items: Omit<ITransactionItem, 'id'>[];
-  discount?: number;
-  tax?: number;
-  payment_method: PaymentMethod;
+  items: string; // The backend currently expects a JSON string of items for simplicity, or we should change it to ITransactionItem[]
+  subtotal: number;
+  tax: number;
+  discount: number;
+  total: number;
+  payment_method: string;
+  status: string;
+  receipt_number: string;
   notes?: string;
 }
 

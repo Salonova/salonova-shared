@@ -47,42 +47,6 @@ export enum SubscriptionStatus {
   CANCELLED = 'cancelled',
 }
 
-export enum SyncOperation {
-  INSERT = 'INSERT',
-  UPDATE = 'UPDATE',
-  DELETE = 'DELETE',
-}
-
-// ============================
-// Sync Constants
-// ============================
-
-/** Sync interval in milliseconds (5 minutes) */
-export const SYNC_INTERVAL_MS = 5 * 60 * 1000;
-
-/** Force sync threshold in days */
-export const FORCE_SYNC_THRESHOLD_DAYS = 4;
-
-/** Grace period for subscription in days */
-export const SUBSCRIPTION_GRACE_PERIOD_DAYS = 3;
-
-/** Batch size for sync uploads */
-export const SYNC_BATCH_SIZE = 100;
-
-// ============================
-// Syncable Table Names
-// ============================
-
-export const SYNCABLE_TABLES = [
-  'customers',
-  'staff',
-  'appointments',
-  'transactions',
-  'inventory',
-] as const;
-
-export type SyncableTable = (typeof SYNCABLE_TABLES)[number];
-
 // ============================
 // Event Names
 // ============================
@@ -103,9 +67,7 @@ export const EventNames = {
   SUBSCRIPTION_UPDATED: 'subscription.updated',
   SUBSCRIPTION_EXPIRED: 'subscription.expired',
 
-  // Sync events
-  SYNC_COMPLETED: 'sync.completed',
-  SYNC_CONFLICT_RESOLVED: 'sync.conflict_resolved',
+
 
   // Inventory events
   INVENTORY_LOW_STOCK: 'inventory.low_stock',
