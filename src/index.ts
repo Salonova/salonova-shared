@@ -15,6 +15,7 @@ export * from './types/appointment';
 export * from './types/transaction';
 export * from './types/inventory';
 export * from './types/subscription';
+export * from './types/rbac';
 
 // Sync Types
 export * from './types/sync';

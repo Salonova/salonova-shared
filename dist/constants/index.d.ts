@@ -1,3 +1,5 @@
+export declare const SUBSCRIPTION_GRACE_PERIOD_DAYS = 3;
+export declare const FORCE_SYNC_THRESHOLD_DAYS = 7;
 export declare enum UserRole {
     SUPER_ADMIN = "super_admin",
     ADMIN = "admin",
@@ -37,21 +39,22 @@ export declare enum SubscriptionStatus {
     EXPIRED = "expired",
     CANCELLED = "cancelled"
 }
-export declare enum SyncOperation {
-    INSERT = "INSERT",
-    UPDATE = "UPDATE",
-    DELETE = "DELETE"
+export declare enum SystemPermission {
+    POS_CREATE = "pos.create",
+    POS_REFUND = "pos.refund",
+    INVENTORY_READ = "inventory.read",
+    INVENTORY_UPDATE = "inventory.update",
+    CUSTOMERS_READ = "customers.read",
+    CUSTOMERS_CREATE = "customers.create",
+    REPORTS_VIEW = "reports.view",
+    STAFF_MANAGE = "staff.manage"
 }
-/** Sync interval in milliseconds (5 minutes) */
-export declare const SYNC_INTERVAL_MS: number;
-/** Force sync threshold in days */
-export declare const FORCE_SYNC_THRESHOLD_DAYS = 4;
-/** Grace period for subscription in days */
-export declare const SUBSCRIPTION_GRACE_PERIOD_DAYS = 3;
-/** Batch size for sync uploads */
-export declare const SYNC_BATCH_SIZE = 100;
-export declare const SYNCABLE_TABLES: readonly ["customers", "staff", "appointments", "transactions", "inventory"];
-export type SyncableTable = (typeof SYNCABLE_TABLES)[number];
+export declare enum DefaultRoleName {
+    OWNER = "Owner",
+    MANAGER = "Manager",
+    CASHIER = "Cashier",
+    STYLIST = "Stylist"
+}
 export declare const EventNames: {
     readonly TRANSACTION_CREATED: "transaction.created";
     readonly TRANSACTION_UPDATED: "transaction.updated";

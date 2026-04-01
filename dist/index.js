@@ -29,6 +29,7 @@ __exportStar(require("./types/appointment"), exports);
 __exportStar(require("./types/transaction"), exports);
 __exportStar(require("./types/inventory"), exports);
 __exportStar(require("./types/subscription"), exports);
+__exportStar(require("./types/rbac"), exports);
 // Sync Types
 __exportStar(require("./types/sync"), exports);
 // Event Types

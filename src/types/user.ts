@@ -42,7 +42,10 @@ export interface ILoginDTO {
 export interface IAuthResponse {
   access_token: string;
   refresh_token: string;
-  user: Omit<IUser, 'password_hash'>;
+  user: Omit<IUser, 'password_hash'> & {
+    roles: string[];
+    permissions: string[];
+  };
 }
 
 export interface ITokenPayload {
@@ -50,6 +53,8 @@ export interface ITokenPayload {
   email: string;
   role: UserRole;
   tenant_id: string;
+  roles: string[];
+  permissions: string[];
   iat?: number;
   exp?: number;
 }

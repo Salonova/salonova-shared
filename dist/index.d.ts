@@ -8,6 +8,7 @@ export * from './types/appointment';
 export * from './types/transaction';
 export * from './types/inventory';
 export * from './types/subscription';
+export * from './types/rbac';
 export * from './types/sync';
 export * from './types/events';
 export * from './types/api';

@@ -3,7 +3,9 @@
 // Shared Constants
 // ============================
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.EventNames = exports.SYNCABLE_TABLES = exports.SYNC_BATCH_SIZE = exports.SUBSCRIPTION_GRACE_PERIOD_DAYS = exports.FORCE_SYNC_THRESHOLD_DAYS = exports.SYNC_INTERVAL_MS = exports.SyncOperation = exports.SubscriptionStatus = exports.SubscriptionPlan = exports.PaymentMethod = exports.TransactionStatus = exports.AppointmentStatus = exports.UserRole = void 0;
+exports.EventNames = exports.DefaultRoleName = exports.SystemPermission = exports.SubscriptionStatus = exports.SubscriptionPlan = exports.PaymentMethod = exports.TransactionStatus = exports.AppointmentStatus = exports.UserRole = exports.FORCE_SYNC_THRESHOLD_DAYS = exports.SUBSCRIPTION_GRACE_PERIOD_DAYS = void 0;
+exports.SUBSCRIPTION_GRACE_PERIOD_DAYS = 3;
+exports.FORCE_SYNC_THRESHOLD_DAYS = 7;
 var UserRole;
 (function (UserRole) {
     UserRole["SUPER_ADMIN"] = "super_admin";
@@ -49,33 +51,27 @@ var SubscriptionStatus;
     SubscriptionStatus["EXPIRED"] = "expired";
     SubscriptionStatus["CANCELLED"] = "cancelled";
 })(SubscriptionStatus || (exports.SubscriptionStatus = SubscriptionStatus = {}));
-var SyncOperation;
-(function (SyncOperation) {
-    SyncOperation["INSERT"] = "INSERT";
-    SyncOperation["UPDATE"] = "UPDATE";
-    SyncOperation["DELETE"] = "DELETE";
-})(SyncOperation || (exports.SyncOperation = SyncOperation = {}));
 // ============================
-// Sync Constants
+// RBAC
 // ============================
-/** Sync interval in milliseconds (5 minutes) */
-exports.SYNC_INTERVAL_MS = 5 * 60 * 1000;
-/** Force sync threshold in days */
-exports.FORCE_SYNC_THRESHOLD_DAYS = 4;
-/** Grace period for subscription in days */
-exports.SUBSCRIPTION_GRACE_PERIOD_DAYS = 3;
-/** Batch size for sync uploads */
-exports.SYNC_BATCH_SIZE = 100;
-// ============================
-// Syncable Table Names
-// ============================
-exports.SYNCABLE_TABLES = [
-    'customers',
-    'staff',
-    'appointments',
-    'transactions',
-    'inventory',
-];
+var SystemPermission;
+(function (SystemPermission) {
+    SystemPermission["POS_CREATE"] = "pos.create";
+    SystemPermission["POS_REFUND"] = "pos.refund";
+    SystemPermission["INVENTORY_READ"] = "inventory.read";
+    SystemPermission["INVENTORY_UPDATE"] = "inventory.update";
+    SystemPermission["CUSTOMERS_READ"] = "customers.read";
+    SystemPermission["CUSTOMERS_CREATE"] = "customers.create";
+    SystemPermission["REPORTS_VIEW"] = "reports.view";
+    SystemPermission["STAFF_MANAGE"] = "staff.manage";
+})(SystemPermission || (exports.SystemPermission = SystemPermission = {}));
+var DefaultRoleName;
+(function (DefaultRoleName) {
+    DefaultRoleName["OWNER"] = "Owner";
+    DefaultRoleName["MANAGER"] = "Manager";
+    DefaultRoleName["CASHIER"] = "Cashier";
+    DefaultRoleName["STYLIST"] = "Stylist";
+})(DefaultRoleName || (exports.DefaultRoleName = DefaultRoleName = {}));
 // ============================
 // Event Names
 // ============================

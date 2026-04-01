@@ -2,6 +2,9 @@
 // Shared Constants
 // ============================
 
+export const SUBSCRIPTION_GRACE_PERIOD_DAYS = 3;
+export const FORCE_SYNC_THRESHOLD_DAYS = 7;
+
 export enum UserRole {
   SUPER_ADMIN = 'super_admin',
   ADMIN = 'admin',
@@ -48,6 +51,28 @@ export enum SubscriptionStatus {
 }
 
 // ============================
+// RBAC
+// ============================
+
+export enum SystemPermission {
+  POS_CREATE = 'pos.create',
+  POS_REFUND = 'pos.refund',
+  INVENTORY_READ = 'inventory.read',
+  INVENTORY_UPDATE = 'inventory.update',
+  CUSTOMERS_READ = 'customers.read',
+  CUSTOMERS_CREATE = 'customers.create',
+  REPORTS_VIEW = 'reports.view',
+  STAFF_MANAGE = 'staff.manage',
+}
+
+export enum DefaultRoleName {
+  OWNER = 'Owner',
+  MANAGER = 'Manager',
+  CASHIER = 'Cashier',
+  STYLIST = 'Stylist',
+}
+
+// ============================
 // Event Names
 // ============================
 
@@ -67,7 +92,9 @@ export const EventNames = {
   SUBSCRIPTION_UPDATED: 'subscription.updated',
   SUBSCRIPTION_EXPIRED: 'subscription.expired',
 
-
+  // Sync events
+  SYNC_COMPLETED: 'sync.completed',
+  SYNC_CONFLICT_RESOLVED: 'sync.conflict_resolved',
 
   // Inventory events
   INVENTORY_LOW_STOCK: 'inventory.low_stock',
