@@ -1,11 +1,5 @@
 export declare const SUBSCRIPTION_GRACE_PERIOD_DAYS = 3;
 export declare const FORCE_SYNC_THRESHOLD_DAYS = 7;
-export declare enum UserRole {
-    SUPER_ADMIN = "super_admin",
-    ADMIN = "admin",
-    STAFF = "staff",
-    CUSTOMER = "customer"
-}
 export declare enum AppointmentStatus {
     PENDING = "pending",
     CONFIRMED = "confirmed",

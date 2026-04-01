@@ -3,16 +3,9 @@
 // Shared Constants
 // ============================
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.EventNames = exports.DefaultRoleName = exports.SystemPermission = exports.SubscriptionStatus = exports.SubscriptionPlan = exports.PaymentMethod = exports.TransactionStatus = exports.AppointmentStatus = exports.UserRole = exports.FORCE_SYNC_THRESHOLD_DAYS = exports.SUBSCRIPTION_GRACE_PERIOD_DAYS = void 0;
+exports.EventNames = exports.DefaultRoleName = exports.SystemPermission = exports.SubscriptionStatus = exports.SubscriptionPlan = exports.PaymentMethod = exports.TransactionStatus = exports.AppointmentStatus = exports.FORCE_SYNC_THRESHOLD_DAYS = exports.SUBSCRIPTION_GRACE_PERIOD_DAYS = void 0;
 exports.SUBSCRIPTION_GRACE_PERIOD_DAYS = 3;
 exports.FORCE_SYNC_THRESHOLD_DAYS = 7;
-var UserRole;
-(function (UserRole) {
-    UserRole["SUPER_ADMIN"] = "super_admin";
-    UserRole["ADMIN"] = "admin";
-    UserRole["STAFF"] = "staff";
-    UserRole["CUSTOMER"] = "customer";
-})(UserRole || (exports.UserRole = UserRole = {}));
 var AppointmentStatus;
 (function (AppointmentStatus) {
     AppointmentStatus["PENDING"] = "pending";

@@ -1,10 +1,8 @@
 import { IBaseEntity } from './base';
-import { UserRole } from '../constants';
 
 export interface IUser extends IBaseEntity {
   email: string;
   password_hash: string;
-  role: UserRole;
   first_name: string;
   last_name: string;
   phone: string | null;
@@ -17,7 +15,6 @@ export interface IUser extends IBaseEntity {
 export interface ICreateUserDTO {
   email: string;
   password: string;
-  role: UserRole;
   first_name: string;
   last_name: string;
   phone?: string;
@@ -31,7 +28,6 @@ export interface IUpdateUserDTO {
   phone?: string;
   avatar_url?: string;
   is_active?: boolean;
-  role?: UserRole;
 }
 
 export interface ILoginDTO {
@@ -51,7 +47,6 @@ export interface IAuthResponse {
 export interface ITokenPayload {
   sub: string; // user id
   email: string;
-  role: UserRole;
   tenant_id: string;
   roles: string[];
   permissions: string[];
