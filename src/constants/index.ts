@@ -57,6 +57,8 @@ export enum SystemPermission {
   CUSTOMERS_CREATE = 'customers.create',
   REPORTS_VIEW = 'reports.view',
   STAFF_MANAGE = 'staff.manage',
+  ACCOUNTS_READ = 'accounts.read',
+  PAYROLL_MANAGE = 'payroll.manage',
 }
 
 export enum DefaultRoleName {
