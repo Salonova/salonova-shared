@@ -16,21 +16,21 @@ export interface ITransaction extends IBaseEntity {
 }
 
 export interface ITransactionItem {
-  id: string;
+  id?: string;
   name: string;
   type: 'service' | 'product';
   quantity: number;
   unit_price: number;
   total: number;
-  inventory_id: string | null;
-  staff_id: string | null;
+  inventory_id?: string | null;
+  staff_id?: string | null;
 }
 
 // DTOs
 export interface ICreateTransactionDTO {
   customer_id?: string;
   staff_id?: string;
-  items: string; // The backend currently expects a JSON string of items for simplicity, or we should change it to ITransactionItem[]
+  items: ITransactionItem[];
   subtotal: number;
   tax: number;
   discount: number;
