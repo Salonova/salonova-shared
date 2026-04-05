@@ -41,7 +41,9 @@ export declare enum SystemPermission {
     CUSTOMERS_READ = "customers.read",
     CUSTOMERS_CREATE = "customers.create",
     REPORTS_VIEW = "reports.view",
-    STAFF_MANAGE = "staff.manage"
+    STAFF_MANAGE = "staff.manage",
+    ACCOUNTS_READ = "accounts.read",
+    PAYROLL_MANAGE = "payroll.manage"
 }
 export declare enum DefaultRoleName {
     OWNER = "Owner",

@@ -14,19 +14,19 @@ export interface ITransaction extends IBaseEntity {
     receipt_number: string;
 }
 export interface ITransactionItem {
-    id: string;
+    id?: string;
     name: string;
     type: 'service' | 'product';
     quantity: number;
     unit_price: number;
     total: number;
-    inventory_id: string | null;
-    staff_id: string | null;
+    inventory_id?: string | null;
+    staff_id?: string | null;
 }
 export interface ICreateTransactionDTO {
     customer_id?: string;
     staff_id?: string;
-    items: string;
+    items: ITransactionItem[];
     subtotal: number;
     tax: number;
     discount: number;
