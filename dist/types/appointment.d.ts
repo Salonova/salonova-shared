@@ -2,6 +2,8 @@ import { IBaseEntity } from './base';
 import { AppointmentStatus } from '../constants';
 export interface IAppointment extends IBaseEntity {
     customer_id: string;
+    customer_name?: string;
+    customer_phone?: string;
     staff_id: string;
     service_name: string;
     service_price: number;
@@ -13,7 +15,9 @@ export interface IAppointment extends IBaseEntity {
     cancellation_reason: string | null;
 }
 export interface ICreateAppointmentDTO {
-    customer_id: string;
+    customer_id?: string;
+    customer_name?: string;
+    customer_phone?: string;
     staff_id: string;
     service_name: string;
     service_price: number;
@@ -23,6 +27,9 @@ export interface ICreateAppointmentDTO {
     notes?: string;
 }
 export interface IUpdateAppointmentDTO {
+    customer_id?: string;
+    customer_name?: string;
+    customer_phone?: string;
     staff_id?: string;
     service_name?: string;
     service_price?: number;
