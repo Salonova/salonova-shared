@@ -1,6 +1,6 @@
 {
   "name": "salonova-shared-utility",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shared types, DTOs, constants, and utilities for the Salonova platform",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
