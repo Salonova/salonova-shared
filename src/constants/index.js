@@ -51,6 +51,8 @@ var SystemPermission;
     SystemPermission["CUSTOMERS_CREATE"] = "customers.create";
     SystemPermission["REPORTS_VIEW"] = "reports.view";
     SystemPermission["STAFF_MANAGE"] = "staff.manage";
+    SystemPermission["ACCOUNTS_READ"] = "accounts.read";
+    SystemPermission["PAYROLL_MANAGE"] = "payroll.manage";
 })(SystemPermission || (exports.SystemPermission = SystemPermission = {}));
 var DefaultRoleName;
 (function (DefaultRoleName) {
