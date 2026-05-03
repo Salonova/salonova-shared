@@ -1,6 +1,7 @@
 export interface IBaseEntity {
     id: string;
     tenant_id: string;
+    branch_id: string | null;
     created_at: string;
     updated_at: string;
     deleted_at: string | null;

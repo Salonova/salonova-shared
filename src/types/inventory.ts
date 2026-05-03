@@ -13,6 +13,7 @@ export interface IInventoryItem extends IBaseEntity {
   is_active: boolean;
   duration_minutes: number | null; // for services
   image_url: string | null;
+  branch_ids: string[];
 }
 
 // DTOs
@@ -27,6 +28,7 @@ export interface ICreateInventoryItemDTO {
   quantity?: number;
   low_stock_threshold?: number;
   duration_minutes?: number;
+  branch_ids?: string[];
 }
 
 export interface IUpdateInventoryItemDTO {
@@ -41,4 +43,5 @@ export interface IUpdateInventoryItemDTO {
   is_active?: boolean;
   duration_minutes?: number;
   image_url?: string;
+  branch_ids?: string[];
 }

@@ -11,6 +11,7 @@ export interface IStaff extends IBaseEntity {
   is_active: boolean;
   commission_rate: number | null; // percentage
   schedule: IStaffSchedule;
+  branch_ids: string[];
 }
 
 export interface IStaffSchedule {
@@ -32,6 +33,7 @@ export interface ICreateStaffDTO {
   bio?: string;
   commission_rate?: number;
   schedule?: IStaffSchedule;
+  branch_ids?: string[];
 }
 
 export interface IUpdateStaffDTO {
@@ -44,4 +46,5 @@ export interface IUpdateStaffDTO {
   is_active?: boolean;
   commission_rate?: number;
   schedule?: IStaffSchedule;
+  branch_ids?: string[];
 }

@@ -10,6 +10,7 @@ export interface ICustomer extends IBaseEntity {
     total_spent: number;
     last_visit_at: string | null;
     avatar_url: string | null;
+    branch_ids: string[];
 }
 export interface ICreateCustomerDTO {
     name: string;
@@ -19,6 +20,7 @@ export interface ICreateCustomerDTO {
     date_of_birth?: string;
     notes?: string;
     avatar_url?: string;
+    branch_ids?: string[];
 }
 export interface IUpdateCustomerDTO {
     name?: string;
@@ -28,4 +30,5 @@ export interface IUpdateCustomerDTO {
     date_of_birth?: string;
     notes?: string;
     avatar_url?: string;
+    branch_ids?: string[];
 }
