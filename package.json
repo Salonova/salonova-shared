@@ -13,5 +13,10 @@
   "devDependencies": {
     "typescript": "~5.5.0"
   },
-  "private": true
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
