@@ -17,7 +17,10 @@ jobs:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
-      - run: npm run build
-      - run: npm publish --provenance --access public
-        # NOTE: No NODE_AUTH_TOKEN is required when using OIDC Trusted Publishers!
-        # npm will automatically use the GitHub OIDC token.
+      - name: Build package
+        run: npm run build
+      - name: Verify package version
+        run: node -p "require('./package.json').version"
+      - name: Publish to npm
+        run: npm publish --provenance --access public
+        # No token needed - npm uses the GitHub OIDC token automatically
