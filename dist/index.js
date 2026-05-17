@@ -22,6 +22,7 @@ __exportStar(require("./constants"), exports);
 // Entity Types
 __exportStar(require("./types/base"), exports);
 __exportStar(require("./types/tenant"), exports);
+__exportStar(require("./types/purchasing"), exports);
 __exportStar(require("./types/user"), exports);
 __exportStar(require("./types/customer"), exports);
 __exportStar(require("./types/staff"), exports);

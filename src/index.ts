@@ -8,6 +8,7 @@ export * from './constants';
 // Entity Types
 export * from './types/base';
 export * from './types/tenant';
+export * from './types/purchasing';
 export * from './types/user';
 export * from './types/customer';
 export * from './types/staff';
