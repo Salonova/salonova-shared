@@ -1,12 +1,11 @@
 {
   "name": "salonova-shared-utility",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Shared types, DTOs, constants, and utilities for the Salonova platform",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build",
     "watch": "tsc --watch",
     "typecheck": "tsc --noEmit"
   },
