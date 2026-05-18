@@ -40,3 +40,4 @@ __exportStar(require("./types/api"), exports);
 // Utilities
 __exportStar(require("./utils/uuid"), exports);
 __exportStar(require("./utils/date"), exports);
+// Trigger rebuild
