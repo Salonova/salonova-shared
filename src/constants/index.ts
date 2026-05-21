@@ -32,6 +32,7 @@ export enum PaymentMethod {
 export enum SubscriptionPlan {
   FREE = 'free',
   STARTER = 'starter',
+  GROWTH = 'growth',
   PROFESSIONAL = 'professional',
   ENTERPRISE = 'enterprise',
 }

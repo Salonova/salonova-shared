@@ -23,6 +23,7 @@ export declare enum PaymentMethod {
 export declare enum SubscriptionPlan {
     FREE = "free",
     STARTER = "starter",
+    GROWTH = "growth",
     PROFESSIONAL = "professional",
     ENTERPRISE = "enterprise"
 }

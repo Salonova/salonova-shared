@@ -33,6 +33,7 @@ var SubscriptionPlan;
 (function (SubscriptionPlan) {
     SubscriptionPlan["FREE"] = "free";
     SubscriptionPlan["STARTER"] = "starter";
+    SubscriptionPlan["GROWTH"] = "growth";
     SubscriptionPlan["PROFESSIONAL"] = "professional";
     SubscriptionPlan["ENTERPRISE"] = "enterprise";
 })(SubscriptionPlan || (exports.SubscriptionPlan = SubscriptionPlan = {}));
