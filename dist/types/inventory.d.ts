@@ -7,6 +7,7 @@ export interface IInventoryItem extends IBaseEntity {
     type: 'product' | 'service';
     price: number;
     cost: number | null;
+    material_cost: number;
     quantity: number;
     low_stock_threshold: number | null;
     is_active: boolean;
@@ -22,6 +23,7 @@ export interface ICreateInventoryItemDTO {
     type: 'product' | 'service';
     price: number;
     cost?: number;
+    material_cost?: number;
     quantity?: number;
     low_stock_threshold?: number;
     duration_minutes?: number;
@@ -34,6 +36,7 @@ export interface IUpdateInventoryItemDTO {
     category?: string;
     price?: number;
     cost?: number;
+    material_cost?: number;
     quantity?: number;
     low_stock_threshold?: number;
     is_active?: boolean;
