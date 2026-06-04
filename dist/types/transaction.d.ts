@@ -22,6 +22,10 @@ export interface ITransactionItem {
     total: number;
     inventory_id?: string | null;
     staff_id?: string | null;
+    material_cost?: number;
+    material_cost_percentage?: number;
+    material_cost_total?: number;
+    estimated_gross_profit?: number;
 }
 export interface ICreateTransactionDTO {
     customer_id?: string;
