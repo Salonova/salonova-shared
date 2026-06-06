@@ -37,6 +37,7 @@ export declare enum SubscriptionStatus {
 export declare enum SystemPermission {
     POS_CREATE = "pos.create",
     POS_REFUND = "pos.refund",
+    POS_VOID = "pos.void",
     INVENTORY_READ = "inventory.read",
     INVENTORY_UPDATE = "inventory.update",
     CUSTOMERS_READ = "customers.read",

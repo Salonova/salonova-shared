@@ -52,6 +52,7 @@ var SystemPermission;
 (function (SystemPermission) {
     SystemPermission["POS_CREATE"] = "pos.create";
     SystemPermission["POS_REFUND"] = "pos.refund";
+    SystemPermission["POS_VOID"] = "pos.void";
     SystemPermission["INVENTORY_READ"] = "inventory.read";
     SystemPermission["INVENTORY_UPDATE"] = "inventory.update";
     SystemPermission["CUSTOMERS_READ"] = "customers.read";
