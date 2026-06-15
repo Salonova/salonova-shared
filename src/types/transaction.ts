@@ -9,10 +9,23 @@ export interface ITransaction extends IBaseEntity {
   tax: number;
   discount: number;
   total: number;
-  payment_method: PaymentMethod;
+  payment_method: PaymentMethod | string;
   status: TransactionStatus;
   notes: string | null;
   receipt_number: string;
+  amount_paid: number;
+  balance_due: number;
+  payment_status: 'unpaid' | 'partial' | 'paid';
+  due_date?: string | null;
+}
+
+export interface ITransactionPayment extends IBaseEntity {
+  transaction_id: string;
+  amount: number;
+  payment_method: string;
+  reference?: string | null;
+  notes?: string | null;
+  staff_id?: string | null;
 }
 
 export interface ITransactionItem {
@@ -40,8 +53,10 @@ export interface ICreateTransactionDTO {
   discount: number;
   total: number;
   payment_method: string;
-  status: string;
-  receipt_number: string;
+  status?: string;
+  receipt_number?: string;
+  due_date?: string;
+  split_payments?: { method: string; amount: number; reference?: string; note?: string }[];
   notes?: string;
 }
 
